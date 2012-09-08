@@ -1,0 +1,203 @@
+// stylus variables
+$grid = 14
+$fontSize = 13px
+$fontSmall = 11px
+$fontBig = 16px
+$fontFamily = 'Open Sans', Helvetica, Arial, sans-serif
+$bodyTextColor = #646464
+
+// stylus functions
+grid(n)
+    n*$grid px
+
+/* direct tag styles */
+body 
+    padding 0
+    margin 0
+    font-family: $fontFamily
+    font-size $fontSize
+    color: $bodyTextColor
+a 
+    color #00B7FF
+h1
+    padding 0
+    margin 0
+    line-height 1em
+    height 24px
+    font-weight 600
+
+mark
+    color: #648bbd
+    background-color: transparent
+    font-weight: 600
+
+strong
+    font-weight: 600
+
+footer
+    margin-top: grid(1)
+
+input, textarea
+    border: 2px solid #fafafa
+    padding: grid(.5)
+    outline: 0
+    font-family: $fontFamily
+    font-size $fontBig
+    color: $bodyTextColor
+
+/* classes */
+div.container 
+    width grid(68)
+    margin 0 auto
+    padding 0
+
+/* --reusable */
+.author
+    font-size $fontSmall
+    font-weight 600
+.no-display
+    display: none
+
+/* ids */
+#black-box
+    float left
+    position relative
+    background-color #000
+    color #fff
+    padding grid(1)
+    width grid(15)
+    height grid(6)
+    aside
+        font-size $fontSmall
+        float right
+        line-height grid(1)
+        span
+            color #8c8c8c
+    h1
+        position absolute
+        bottom 8px
+        a
+            color #aa66cc
+            text-decoration none    
+
+#top-bar
+    float right
+    width grid(49)
+    line-height grid(2)
+    padding 0 grid(1)
+    background-color #ececec
+    color #919191
+
+#global-stats
+    display: none
+    position: absolute
+    width: grid(20)
+    top: grid(8)
+    padding: grid(1)
+    z-index: 1
+    background-color: rgba(255, 255, 255, 0.8)
+    border: 2px solid #fafafa
+    ul
+        list-style: none
+        margin: 0
+        padding: 0
+        li
+            list-style: none
+            display: block
+
+#new-thread
+    float: left
+    height: grid(5)
+    margin: grid(1)
+    font-size: 23px
+    color: #919191
+    background-color: rgba(255, 255, 255, 0.9)
+    #start-thread-btn
+        display: inline-block
+        height: grid(5)
+        width: grid(5)
+        line-height: grid(5)
+        text-align: center
+        background-color: #f1f8dc
+        margin: 0
+        background-position: center center
+
+#new-thread-input
+    display: none
+    position: absolute
+    width: grid(42)
+    margin-left: -14px
+    padding: grid(1)
+    background-color: rgba(255, 255, 255, 0.85)
+    border: 2px solid #fafafa
+    font-size: grid(2)
+    font-weight: 300
+    color: #919191
+
+#thread-list
+    width: grid(23)
+    overflow: hidden
+    top: grid(9)
+    position: absolute
+    ul
+        overflow: auto
+        width grid(25)
+        padding 0
+        margin 0
+        list-style: none
+        li
+            width grid(21)
+            padding: grid(1)
+            margin: 0 grid(1) grid(1) 0
+            list-style: none
+            display: block
+            cursor: pointer
+            .author
+                display: block
+        li.odd
+            background-color: #fafafa
+        li.odd:hover
+            background-color: darken(#fafafa, 5)
+        li.even
+            background-color: #f5f5f5
+        li.even:hover
+            background-color: darken(#f5f5f5, 5)
+
+#thread-details
+    float: right
+    width: grid(43)
+    padding: grid(1) grid(1) grid(1) 0
+
+/* icons */
+[class^="icon"]
+    display: inline-block
+    width: 14px
+    height: 14px
+    vertical-align: middle
+    background-repeat: no-repeat
+    margin: 0 5px
+
+.icon-invite
+    background-image: url('../images/icons/icon-invite.png')
+    width: 20px
+    height: 20px
+
+.icon-threads
+    background-image: url('../images/icons/icon-threads.png')
+    width: 24px
+    height: 24px
+
+.icon-replies
+    background-image: url('../images/icons/icon-replies.png')
+    width: 24px
+    height: 24px
+
+.icon-people
+    background-image: url('../images/icons/icon-people.png')
+    width: 28px
+    height: 28px
+
+.icon-big-plus
+    background-image: url('../images/icons/big-icon-plus.png')
+    width: 29px
+    height: 29px
