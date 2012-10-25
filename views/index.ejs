@@ -8,12 +8,14 @@
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+	<script src="js/underscore.js"></script>
+	<script src="js/backbone.js"></script>
+	<script src="js/alsichat_backbone.js"></script>
 	<script src="js/alsichat_main.js"></script>
-	<script src="js/alsichat_events.js"></script>
 </head>
 <body>
 <div class="container">
-	<header id="header-box">
+	<header>
 		<section id="black-box">
 			<aside>alsichat<span>0.2</span></aside>
 			<h1><a href="#">haramcore.</a></h1>
@@ -22,7 +24,7 @@
 			karansheth@gmail.com
 		</section>
  		<section id="new-thread">
-			<a href="#" id="start-thread-btn" class="icon-big-plus"></a>
+			<a href="#" id="start-thread-btn"><i class="icon-big-plus"></i></a>
 		</section>
 		<section id="global-stats">
 			<ul>
@@ -127,53 +129,51 @@
 	</nav>
 
 	<section id="thread-details">
-		<section id="new-thread-input">
-			Start a new thread
+		<section id="new-thread-tip">
+			&#171; Start a new thread
 			<textarea class="no-display" name="new_thread">Start a new thread</textarea>
 		</section>
 
 		<article class="first-post">
-			<strong>Simanta Datta</strong>
-			<p>
-				Can any of you sell my epiphone les paul and i sell my fender acoustic and buy one more epi les paul here.
-				I am so lost without electric guitar, i can't find no riff in acoustic
-			</p>
+			<span class="author">Simanta Datta</span>
+			Can any of you sell my epiphone les paul and i sell my fender acoustic and buy one more epi les paul here.
+			I am so lost without electric guitar, i can't find no riff in acoustic
 		</article>
 		<aside class="thread-meta">
 			<ul>
 				<li><i class="icon-calendar"></i> <time datetime="2012-09-09"><mark>9 Sep</mark> 2012 </time></li>
-				<li><i class="icon-clock"></i> <time datetime="14:00"><mark>2</mark> PM</time></li>
+				<li><i class="icon-time"></i> <time datetime="14:00"><mark>2</mark> PM</time></li>
 				<li><i class="icon-replies"></i> <mark>6</mark> replies</li>
 				<li><i class="icon-reply"></i> <mark class="size">Reply</mark></li>
 			</ul>
 		</aside>
 
 		<article>
-			<strong>Simanta Datta</strong>
+			<span class="author">Simanta Datta</span>
 			Gojira comes with the best death metal riffs
 			<span class="meta">9 hours ago</span>
 		</article>
 
 		<article>
-			<strong>Simanta Datta</strong>
+			<span class="author">Simanta Datta</span>
 			and duplantier has the best vocal.. like townsend.. i like these growl with melody shit man... it's not easy to do
 			<span class="meta">9 hours ago</span>
 		</article>
 
 		<article>
-			<strong>Sachin Suresh Pratap Singh</strong>
+			<span class="author">Sachin Suresh Pratap Singh</span>
 			Bokachoda
 			<span class="meta">9 hours ago</span>
 		</article>
 
 		<article>
-			<strong>Dinesh Sukhija</strong>
+			<span class="author">Dinesh Sukhija</span>
 			How long will you keep trading your life Simanta?
 			<span class="meta">7 hours ago</span>
 		</article>
 
 		<article>
-			<strong>Karan Sheth</strong>
+			<span class="author">Karan Sheth</span>
 			please dont sell your epi les paul in India. If you're selling I'll keyep it. I'll pay you installments... over a few thousand years. But sirislly. The only reason I wasn't playing it cuz I feel uncomfortable with panzy .9 strings now. I needs mah .11-12s.
 			<span class="meta">6 hours ago</span>
 		</article>
